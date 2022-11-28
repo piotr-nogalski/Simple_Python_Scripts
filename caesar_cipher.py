@@ -14,15 +14,12 @@ def encrypt(txt, sh):
             if ord(new_v) > 122:
                 new_v = chr(ord(new_v) - 26)
             result += new_v
-        elif v == " ":
-            new_v = " "
-            result += new_v
         elif 65 <= ord(v) <= 90:
             new_v = chr(ord(v) + int(sh))
             if ord(new_v) > 90:
                 new_v = chr(ord(new_v) - 26)
             result += new_v
-        elif v in "0123456789":
+        elif v in " 0123456789":
             new_v = v
             result += new_v
 
@@ -38,15 +35,12 @@ def decrypt(txt, sh):
             if ord(new_v) < 97:
                 new_v = chr(ord(new_v) + 26)
             result += new_v
-        elif v == " ":
-            new_v = " "
-            result += new_v
         elif 65 <= ord(v) <= 90:
             new_v = chr(ord(v) - int(sh))
             if ord(new_v) < 65:
                 new_v = chr(ord(new_v) + 26)
             result += new_v
-        elif v in "0123456789":
+        elif v in " 0123456789":
             new_v = v
             result += new_v
 

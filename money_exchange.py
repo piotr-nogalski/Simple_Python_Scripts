@@ -36,24 +36,24 @@ def exchange(c1, c2, value=1):
 
 def print_currency(c):
     if c == '1':
-        return 'zl'
+        return 'PLN'
     elif c == '2':
-        return '€'
+        return 'EUR'
     elif c == '3':
-        return '$'
+        return 'USD'
 
 # User Interactions
 
 
 print("Welcome to cantor dear user, please select currency that you want to exchange")
-print("1.zloty(1zl)", "2.euro(4.54zl)", "3.dollar(4.70zl)", sep="\n")
+print("1.PLN(1PLN)", "2.EUR(4.54PLN)", "3.USD(4.70PLN)", sep="\n")
 curr = input()
 
 while curr.isdigit() != 1 or int(curr) > 3:
     curr = input("This input is invalid try again: ")
 
 print("What you want to exchange for?: ")
-print("1.zloty(1zl)", "2.euro(4.54zl)", "3.dollar(4.70zl)", sep="\n")
+print("1.PLN(1 PLN)", "2.EUR(4.54 PLN)", "3.USD(4.70 PLN)", sep="\n")
 curr_exch = input()
 
 while curr_exch.isdigit() != 1 or int(curr_exch) > 3:

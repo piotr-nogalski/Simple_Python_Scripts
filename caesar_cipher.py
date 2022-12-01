@@ -69,6 +69,7 @@ while is_running:
         shift = input("Give shift:")
         while shift.isdigit() != 1:
             shift = input("Wrong value try again")
+        shift = int(shift) % 26
         print(decrypt(text, shift))
     elif action == '3':
         is_running = False

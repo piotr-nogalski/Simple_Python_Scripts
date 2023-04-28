@@ -1,49 +1,26 @@
-# GRA LOSOWA
-
 # Modules
 import random
+
+
 # Variables
-random_number = random.randrange(1, 20)
-# Functions
 
+random_number = random.randrange(17)
+guessed_number = 0
+guessed = "Good job " + str(random_number) + " is the number I was thinking about!"
 
-def take_number():
-    value = input('Please give number from range 1-20: ')
-    while not value.isdigit():
-        value = input("Wrong input please try again!: ")
-    user_number = int(value)
-    return user_number
+# Welcome print
 
+print("Hi, welcome to my game, try to guess what number Im thinking about in range 0 - 17")
 
-print(random_number)
-print('Welcome to random game !')
-guess = take_number()
-# Game loop
-while guess != random_number:
-    if 1 <= guess <= 20:
+# Function
 
-        print("That's not the number")
-        dec = input("Do you want to try again ?(y/n)")
-        if dec == "y" or dec == "Y":
-
-            guess = take_number()
-
-        elif dec == "n" or dec == "N":
-
-            guess = random_number
-            print("Im sorry have a good day :/")
-
-    else:
-        print("This number is to high! Choose number in range 1-20!")
-        dec = input("Do you want to try again ?(y/n)")
-
-        if dec == "y" or dec == "Y":
-
-            guess = take_number()
-
-        elif dec == "n" or dec == "N":
-
-            guess = random_number
-            print("Im sorry have a good day :/")
-
-print('The number was ' + str(random_number))
+while guessed_number != random_number:
+    # Try / except is used for case where user gives letters or strings as an input
+    try:
+        guessed_number = int(input("Try to guess !:"))
+        if guessed_number != random_number:
+            print("That's not it !")
+        else:
+            print(guessed)
+    except ValueError:
+        print("That's not correct, try again")

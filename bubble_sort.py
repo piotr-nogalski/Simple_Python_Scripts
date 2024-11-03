@@ -17,6 +17,6 @@ while count:
         if var[i] > var[i+1]:
             var[i], var[i+1] = var[i+1], var[i]
             count = 1
-end = time.time()
+stop = time.time()
 print(var)
-print("Sorting time:", round(end - start, 2))
+print("Sorting time:", round(stop - start, 2))
